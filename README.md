@@ -23,6 +23,6 @@ if you use webpack, you can use it at webpack.config.js:
   }
 ```
 
-[simplite template](http://example.com/ "simplite")
+[simplite template](https://github.com/zhangshaolong/simplite "simplite")
 
 [a webpack+es6+simplite+simplite-loader demo](https://github.com/zhangshaolong/scaffold "scaffold")
