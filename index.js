@@ -1,9 +1,8 @@
-const Simplite = require('simplite')
 module.exports = function (content) {
-  return `
-    const Simplite = require('simplite');
-    module.exports = function (data) {return (function(${Simplite.dataKey}){
-      ${Simplite.toCodeBlock(content)}
-    }).call(Simplite, data);};
-  `
+  return (
+`module.exports = function (data) {
+  const Simplite = require('simplite');
+  const renderer = Function (Simplite.dataKey, Simplite.toCodeBlock(${JSON.stringify(content)}));
+  return renderer.call(Simplite, data);
+}`)
 }
